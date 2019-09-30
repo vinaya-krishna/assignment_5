@@ -1,0 +1,24 @@
+
+body {
+    font-family: $body-font;
+    @include font_size(null,1em,2em);
+    background: url($image-bg) $background-color repeat-x;
+    margin:0;
+  }
+
+  
+main {
+    width:940px;
+    margin:0 auto;
+    padding:0 10px;
+
+    @include break(959px){
+      width:768px;
+    }
+    @include break(767px){
+      width:460px;
+    }
+    @include break(459px){
+      width:300px;
+    }
+}

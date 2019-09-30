@@ -1,0 +1,60 @@
+.greybar {
+    @include set_size(100%, 90px);
+    background:$gray-bar-color;
+    clear:both;
+    padding-top:30px;
+}
+
+footer {
+    @include set_size(100%, 120px);
+    background:$footer-background-color;
+    text-align:center;
+    color:$foorter-text-color;
+    padding-top:50px;
+
+    @include break(459px){
+        text-align:center;
+    }
+    p{
+        @include break(459px){
+            float:none;
+            margin:0;
+        }
+    }
+    img{
+        @include break(459px){
+            float:none;
+            margin:0;
+        }
+    }
+}
+
+.social-media {
+    margin:0 auto;
+    width:165px;
+
+    a {
+        display:block;
+        @include set_size(36px, 36px);
+        text-indent:-9999px;
+    }
+
+    div {
+        float:left;
+        margin-right:5px;
+    }
+
+    $i:0;
+    @while $i<=4 {
+        div:nth-child(#{$i}) {
+            background:url($image-social-media)  ($i - 1)*-38px 0; 
+            $i : $i +1;
+        }
+    }
+}
+
+.greybar, article img{
+    @include break(459px){
+        display:none;
+    }
+}

@@ -1,0 +1,22 @@
+
+@mixin set_size($width:auto,$height:auto) {
+    width: $width;
+    height: $height;
+}
+
+@mixin font_size($weight:normal,$size:1em,$height:normal) {
+    font-weight:$weight;
+    font-size:$size;
+    line-height:$height;  
+}
+
+@mixin margin_width($width:auto,$margin:auto){
+    width:$width;
+    margin: $margin;    
+}
+
+@mixin break($screen-width) {
+    @media only screen and (max-width:$screen-width){
+        @content;
+    }
+}

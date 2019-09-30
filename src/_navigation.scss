@@ -1,0 +1,69 @@
+figure {
+    @include set_size(400px, 190px);
+    background:url($image-logo) no-repeat 0 50px;
+    float:left;
+    display:block;
+    margin:0;
+
+    @include break(959px){
+        @include set_size(inherit, 140px);
+        float:none;
+        background-position:center;
+    }
+    @include break(459px){
+        background-size:contain;
+        height:100px;
+    }
+
+}
+
+nav {
+    float:left;
+    text-align:right;
+    @include set_size(540px, 190px);
+
+    @include break(959px){
+        @include set_size(inherit,50px);
+        float:none;
+        text-align:center;
+    }
+
+    @include break(459px){
+        margin-bottom:40px !important;
+    }
+
+    ul {
+        list-style-type:none;
+        margin-top:95px;
+
+        @include break(959px){
+            margin-top:0;
+        }
+    }
+
+    ul li {
+        display:inline;
+        font-size:0.8em;
+        margin-right:10px;
+
+        @include break(959px){
+            font-size:1em;
+            margin:0 10px;
+        }
+
+        @include break(767px){
+            font-size:0.8em;
+            margin:0 5px;
+        }
+    }
+
+    ul li a {
+        color:$orange;
+        text-decoration:none;
+        letter-spacing:-0.01em;
+
+        &:hover {
+            color: $white;
+        }
+    }
+}
